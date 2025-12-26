@@ -71,6 +71,12 @@ Output: `reports/final_test_metrics.json`
 - Test PR-AUC: **0.5580**
 - Test Brier: **0.1345**
 
+## Calibration (validation)
+We evaluate probability calibration to ensure predicted PDs are reliable for risk decisioning.
+
+![Calibration curves on validation](reports/figures/calibration_curves_val.png)
+
+
 ## Why calibration matters (credit risk)
 In credit risk, we don’t only want a model that ranks customers well (ROC-AUC / PR-AUC).  
 We also want predicted probabilities that behave like a **real PD**. Calibration helps align predicted probabilities with observed default rates, improving decisioning and thresholding.
